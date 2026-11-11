@@ -21,3 +21,6 @@ dist/
 .env.production
 npm-debug.log*
 .idea/
+
+# Cloudflare/workerd local preview state
+.wrangler/
