@@ -1,0 +1,17 @@
+# Dependencies and builds
+node_modules/
+dist/
+.astro/
+.wix/
+
+# Environment and secrets
+.env
+.env.*
+
+# Local-only Claude settings
+.claude/settings.local.json
+
+# Impeccable engine binary: downloaded and checksum-verified on demand
+.claude/skills/impeccable/scripts/bin/
+
+.DS_Store
