@@ -36,6 +36,10 @@ regardless of their socio-economic status or geographic location, and to promote
 worldwide." Its purpose *(current site)*: "to advocate for Universal Health Care and to advance the
 importance of primary care as a critical component of any healthcare system."
 
+The site must represent the **full breadth** of Pathfinder's work, not only events and reports:
+its convening role, healthcare innovation, education and training, research, international
+collaboration and partnerships, each reflected in proportion.
+
 The site succeeds when each audience can, with equal ease:
 
 1. **Start a partnership**: enquire about collaborating, sponsoring, funding or co-developing work.
@@ -79,9 +83,10 @@ CIC mandate and primary-care leadership; an academic body or think tank does not
 - **Platform:** Wix Headless (Wix-managed), Astro. Events through Wix Events; forms through Wix
   Forms; publications and partnership content through Wix CMS collections. See `CLAUDE.md`.
 - **Undecided:**
-  - whether **Pathfinder Academy** (postgraduate programmes such as PGDip Community Dermatology
-    and PGDip Community Gynaecology, *current site*) is part of this site at launch, linked out, or
-    left on the current site;
+  - how **Pathfinder Academy** (postgraduate programmes such as PGDip Community Dermatology and
+    PGDip Community Gynaecology, *current site*) is introduced later. Decided: it is **not** a
+    launch priority and **not** a main navigation section at launch, but the information
+    architecture must leave room to add it;
   - whether the leadership assessments, members area, groups and careers pages *(current site)*
     carry over;
   - the redirect plan from current URLs when the domain eventually moves.
@@ -89,7 +94,14 @@ CIC mandate and primary-care leadership; an academic body or think tank does not
 ## Brand Commitments
 
 - Name: **Pathfinder Healthcare Developments CIC** (short form **Pathfinder CIC**).
-- Existing logo and brand guidelines are available from the owner (not yet in this repository).
+- **Logo** (supplied 11 Nov 2026 as a raster image; vector file still to come): an orange disc cut
+  by a white V-shaped path, with the lowercase wordmark "pathfinder" in dark navy and the line
+  "A Commitment to Care" in orange.
+- **Brand colours are binding:** Pathfinder orange (sampled from the logo ≈ `#F07800`) and dark navy
+  (≈ `#082048`). Complementary colours, typography and layout may be developed freely around them.
+- Desired character (owner): warm, sophisticated, modern and memorable, with a strong, distinctive
+  visual identity, and explicitly **not** a conventional NHS or corporate healthcare website.
+- Tagline in the logo: "A Commitment to Care" (CARE also names the values).
 - Values, **CARE** *(current site)*: Commitment, Accountability, Respect, Excellence.
 - Current strapline *(current site)*: "Delivering Global Social Impact in Healthcare."
 - UK English throughout.
@@ -99,9 +111,10 @@ CIC mandate and primary-care leadership; an academic body or think tank does not
 
 ## Evidence on Hand
 
-Confirmed by the owner as available, but **not yet supplied** to this project:
+Supplied: the logo as a raster image (in chat; vector to follow). Confirmed by the owner as
+available, but **not yet supplied** to this project:
 
-- logo files and brand guidelines;
+- vector logo files and brand guidelines;
 - reports and publications (PDFs);
 - Pathfinder's own photography and video of its events, people and work;
 - named partners, past and upcoming events, outcomes and case studies that can be shown publicly.
