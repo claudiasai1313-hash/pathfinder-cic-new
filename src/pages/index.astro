@@ -1,0 +1,49 @@
+---
+// Technical placeholder: proves this code is connected to the existing
+// Pathfinder CIC Wix Headless project. Read-only. Not a design.
+// It will be replaced once the creative direction is approved.
+import { posts } from "@wix/blog";
+import { wixEventsV2 } from "@wix/events";
+
+type Check = { label: string; ok: boolean; detail: string };
+
+async function check(label: string, run: () => Promise<string>): Promise<Check> {
+  try {
+    return { label, ok: true, detail: await run() };
+  } catch (error) {
+    return { label, ok: false, detail: error instanceof Error ? error.message : String(error) };
+  }
+}
+
+const checks = await Promise.all([
+  check("Wix Events", async () => {
+    const res = await wixEventsV2.queryEvents().limit(10).find();
+    return `${res.items.length} event(s) returned`;
+  }),
+  check("Wix Blog", async () => {
+    const res = await posts.queryPosts().limit(10).find();
+    return `${res.items.length} post(s): ${res.items.map((p) => p.title).join(" · ")}`;
+  }),
+]);
+---
+
+<!doctype html>
+<html lang="en-GB">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="robots" content="noindex, nofollow" />
+    <title>Pathfinder CIC: connection test</title>
+  </head>
+  <body>
+    <h1>Pathfinder CIC: connection test</h1>
+    <p>Technical placeholder only. Not the website design.</p>
+    <ul>
+      {checks.map((c) => (
+        <li data-check={c.label} data-ok={String(c.ok)}>
+          <strong>{c.label}:</strong> {c.ok ? "connected" : "FAILED"} ({c.detail})
+        </li>
+      ))}
+    </ul>
+  </body>
+</html>

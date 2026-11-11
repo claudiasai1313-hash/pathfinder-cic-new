@@ -15,3 +15,9 @@ dist/
 .claude/skills/impeccable/scripts/bin/
 
 .DS_Store
+
+# Wix and Astro local files
+.env.local
+.env.production
+npm-debug.log*
+.idea/

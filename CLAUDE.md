@@ -21,7 +21,25 @@ language, and confirm before anything that is hard to undo.
 - Name: Pathfinder CIC · Site ID `3e79c66a-f963-4700-91c1-c36c7e8718c0`
 - Type: Wix Headless, Wix-managed (hosted by Wix), namespace HEADLESS, no domain connected.
 - Locale: en-GB, GBP, Europe/London.
-- Framework: **Astro 5** (Wix's `headless link` does not support Astro 6).
+- Framework: **Astro 7** with `@wix/astro` 3.x, matching Wix's current blank template. (Astro 5
+  only works with the older `@wix/astro` 2.x line; the "Astro 5 only" note in Wix's docs applies to
+  the `headless link` command, which we do not use because it creates a new site.)
+- `wix.config.json` was written by hand (`projectType: "Site"`, `appId`, `siteId`) because every
+  Wix setup command provisions a new site. Its shape matches the Wix CLI's own config schema, and
+  `wix env pull` returned the same client ID. Do not change it.
+
+## Local development
+
+- Node **24.22.1+** is required by `@wix/cli` (`node -v` to check).
+- First run on a machine: `npm install --ignore-scripts`, then `npx wix env pull` (writes
+  `.env.local`, which is git-ignored and must never be committed).
+- Preview locally: `npm run dev` (http://localhost:4321). Build locally: `npm run build`.
+- Never run `npm run release` / `wix release` without the owner's explicit go-ahead.
+- In Claude's cloud sandbox the local preview cannot fetch Wix visitor tokens (the Cloudflare
+  `workerd` runtime does its own DNS and the sandbox only allows proxied traffic), so pages that
+  call Wix return a 500 there. Verify Wix calls with REST + a visitor token instead, or preview on
+  a normal computer. Also, Astro 7 runs `astro dev` in the background when it detects an AI agent,
+  which makes `wix dev` exit; use `npx astro dev` / `npx astro dev logs` / `npx astro dev stop`.
 
 ## Scope at launch
 
